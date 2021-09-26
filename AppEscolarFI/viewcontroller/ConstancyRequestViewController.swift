@@ -12,6 +12,8 @@ class ConstancyRequestViewController: UIViewController,UICollectionViewDataSourc
     let viewManualSchoolConstancyService = ViewManualSchoolConstancyService()
     let refreshControl = UIRefreshControl()
     let postInputView = SelectConstancyViewController()
+    
+    var statusComplete: String?
     var tipoConstancia = Array(repeating: "Z", count: 1)
     var manualSchoolConstancies: [ManualSchoolConstancy]?{
          didSet {
@@ -19,39 +21,26 @@ class ConstancyRequestViewController: UIViewController,UICollectionViewDataSourc
             self.refreshControl.endRefreshing()
          }
      }
-    
-    
+
     @IBOutlet weak var manualConstancyCollectionView: UICollectionView!
     @IBAction func newRequest(_ sender: Any) {
     }
 
-    
     @IBAction func reload(_ sender: Any) {
         loadManualSchoolConstancies()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        postInputView.delegate = self
-        
-        manualConstancyCollectionView.delegate = self
-        manualConstancyCollectionView.prefetchDataSource = self
-        manualConstancyCollectionView.dataSource = self
-        let nib = UINib(nibName: String(describing: ManualSchoolConstancyCollectionViewCell.self), bundle: nil)
-        manualConstancyCollectionView.register(nib, forCellWithReuseIdentifier: "manualConstancyCell")
-        
-        manualConstancyCollectionView.addSubview(refreshControl)
-
-        refreshControl.addTarget(self, action: #selector(self.loadManualSchoolConstancies), for: UIControl.Event.valueChanged)
+        loadConfig()
         loadManualSchoolConstancies()
-        print("constancy Request")
 
-        // Do any additional setup after loading the view.
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?){
         
         for constancy in manualSchoolConstancies!{
-            tipoConstancia.append(constancy.name)
+            statusComplete = "\(constancy.name).\(constancy.constancyStatuts )"
+            tipoConstancia.append(statusComplete!)
         }
             if (segue.identifier == "constancyRequest"){
             let selectConstancy = segue.destination as? SelectConstancyViewController
@@ -63,9 +52,19 @@ class ConstancyRequestViewController: UIViewController,UICollectionViewDataSourc
         viewManualSchoolConstancyService.load { [unowned self] manualSchoolConstancies in self.manualSchoolConstancies = manualSchoolConstancies }
     
     }
-    
+    func loadConfig(){
+        postInputView.delegate = self
+        manualConstancyCollectionView.delegate = self
+        manualConstancyCollectionView.prefetchDataSource = self
+        manualConstancyCollectionView.dataSource = self
+        let nib = UINib(nibName: String(describing: ManualSchoolConstancyCollectionViewCell.self), bundle: nil)
+        manualConstancyCollectionView.register(nib, forCellWithReuseIdentifier: "manualConstancyCell")
+        manualConstancyCollectionView.addSubview(refreshControl)
+        refreshControl.addTarget(self, action: #selector(self.loadManualSchoolConstancies), for: UIControl.Event.valueChanged)
+        
+    }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        //print("dani mi amor:\(manualSchoolConstancies?.count)")
+
         return manualSchoolConstancies?.count ?? 1
     }
     
@@ -82,16 +81,7 @@ class ConstancyRequestViewController: UIViewController,UICollectionViewDataSourc
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: manualConstancyCollectionView.bounds.width, height: 50)
     }
-    
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
 

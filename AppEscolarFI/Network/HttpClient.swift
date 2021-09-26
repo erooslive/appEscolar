@@ -55,7 +55,7 @@ struct HttpClient {
             builder.headers = ["Authorization": "Bearer \(token)"]
             
         }
-        
+        //print("a vers \(builder.request())")
         return builder.request()
     }
 }

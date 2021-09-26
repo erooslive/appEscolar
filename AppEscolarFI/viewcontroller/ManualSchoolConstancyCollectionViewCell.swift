@@ -15,11 +15,9 @@ class ManualSchoolConstancyCollectionViewCell: UICollectionViewCell {
         }
     }
 
-    
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var status: UILabel!
     @IBOutlet weak var statusImage: UIImageView!
-    
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -29,7 +27,7 @@ class ManualSchoolConstancyCollectionViewCell: UICollectionViewCell {
     }
     func updateView()  {
         guard let manualSchoolConstancy = manualSchoolConstancy else {return }
-        let status = manualSchoolConstancy.constancyStatuts!
+        let status = manualSchoolConstancy.constancyStatuts
         
         switch status {
         case 1:
@@ -39,8 +37,10 @@ class ManualSchoolConstancyCollectionViewCell: UICollectionViewCell {
             self.status.text = MapResult.recibido.result()
         case 3:
             self.status.text = MapResult.listo.result()
+            self.statusImage.image = #imageLiteral(resourceName: "pngegg.png")
         case 4:
             self.status.text = MapResult.entregado.result()
+            self.statusImage.image = #imageLiteral(resourceName: "pngegg.png")
         default:
             self.status.text = MapResult.unkown.result()
         }
@@ -57,11 +57,7 @@ class ManualSchoolConstancyCollectionViewCell: UICollectionViewCell {
         default:
             self.name.text = MapName.unkown.result()
         }
-        
-        
-        
-        //self.name.text = manualSchoolConstancy.name
-        
+
     }
 
 }

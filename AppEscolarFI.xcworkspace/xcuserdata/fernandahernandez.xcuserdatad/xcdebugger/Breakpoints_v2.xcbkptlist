@@ -7,64 +7,17 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "51263E62-E084-4DE0-A940-9DF7ED2D6910"
+            uuid = "8EBB543F-CB3E-4EBC-95C3-F440C5A71F1F"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "AppEscolarFI/viewcontroller/NoticeViewController.swift"
+            filePath = "AppEscolarFI/viewcontroller/TypeOfDocumentsViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "12"
-            endingLineNumber = "12"
-            landmarkName = "NoticeViewController"
-            landmarkType = "3">
-            <Locations>
-               <Location
-                  uuid = "51263E62-E084-4DE0-A940-9DF7ED2D6910 - 5140ed63fe78eb60"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "AppEscolarFI.NoticeViewController.viewSchooSubjectsService.getter : AppEscolarFI.ViewSchooSubjectsService"
-                  moduleName = "AppEscolarFI"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/fernandahernandez/Desktop/ProyectoFinal/AppEscolarFI/AppEscolarFI/viewcontroller/NoticeViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "23"
-                  endingLineNumber = "23"
-                  offsetFromSymbolStart = "167">
-               </Location>
-               <Location
-                  uuid = "51263E62-E084-4DE0-A940-9DF7ED2D6910 - 26825d67e73378fe"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "AppEscolarFI.NoticeViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; AppEscolarFI.NoticeViewController"
-                  moduleName = "AppEscolarFI"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/fernandahernandez/Desktop/ProyectoFinal/AppEscolarFI/AppEscolarFI/viewcontroller/NoticeViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "23"
-                  endingLineNumber = "23"
-                  offsetFromSymbolStart = "288">
-               </Location>
-               <Location
-                  uuid = "51263E62-E084-4DE0-A940-9DF7ED2D6910 - 26cc443762709cb7"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "AppEscolarFI.NoticeViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;AppEscolarFI.NoticeViewController&gt;"
-                  moduleName = "AppEscolarFI"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/fernandahernandez/Desktop/ProyectoFinal/AppEscolarFI/AppEscolarFI/viewcontroller/NoticeViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "23"
-                  endingLineNumber = "23"
-                  offsetFromSymbolStart = "217">
-               </Location>
-            </Locations>
+            startingLineNumber = "19"
+            endingLineNumber = "19"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

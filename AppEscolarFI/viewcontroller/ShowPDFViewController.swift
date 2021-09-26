@@ -6,24 +6,39 @@
 //
 
 import UIKit
+import PDFKit
 
-class ShowPDFViewController: UIViewController {
-
+class ShowPDFViewController: UIViewController,PDFViewDelegate
+{
+    let pdfVieww = PDFView()
+    var titleName: String?
+    var stringUrl: String?
+    
+    @IBOutlet weak var titlaLabel: UILabel!
+    @IBOutlet weak var pdfView: UIView!
+    @IBAction func close(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
+        titlaLabel.text = titleName
+        pdfVieww.delegate = self
+        view.addSubview(pdfView)
+        let url = URL(string: stringUrl!)
+        let document = PDFDocument(url: url!)
+        pdfVieww.document = document
+        pdfVieww.autoScales = true
+        pdfVieww.displayMode = .singlePageContinuous
+        pdfVieww.displayDirection = .vertical
+        pdfView.autoresizesSubviews = true
+        pdfView.insertSubview(pdfVieww, at: 1)
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        }
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        pdfVieww.frame = pdfView.bounds
     }
-    */
 
 }
+
+

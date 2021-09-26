@@ -9,7 +9,7 @@ import Foundation
 struct ManualSchoolConstancy: Restable  {
     var id: Int?
     let name: String
-    let constancyStatuts: Int?
+    let constancyStatuts: Int
     var student_id: Int?
     
     init(name:String, constancyStatuts:Int){
@@ -54,7 +54,7 @@ enum MapName: Int{
         case .certificado:
             return "Certificado de estudios"
         case .constanciaTermino:
-            return "Constancia de Termino de estudios"
+            return "Constancia termino de estudios"
         case .constanciaCreditos:
             return "Constancia de créditos"
         case .unkown:

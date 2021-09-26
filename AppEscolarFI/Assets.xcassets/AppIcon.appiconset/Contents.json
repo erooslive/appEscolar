@@ -1,6 +1,7 @@
 {
   "images" : [
     {
+      "filename" : "ULA40x40Pixeles.jpg",
       "idiom" : "iphone",
       "scale" : "2x",
       "size" : "20x20"
@@ -11,11 +12,13 @@
       "size" : "20x20"
     },
     {
+      "filename" : "ULA40x40.jpg",
       "idiom" : "iphone",
       "scale" : "2x",
       "size" : "29x29"
     },
     {
+      "filename" : "ULA40x40-1.jpg",
       "idiom" : "iphone",
       "scale" : "3x",
       "size" : "29x29"

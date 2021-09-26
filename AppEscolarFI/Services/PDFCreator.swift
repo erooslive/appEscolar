@@ -13,35 +13,31 @@ class PDFCreator: NSObject {
     let title: String = "FACULTAD DE INGENIERÍA \nSECRETARIA DE SERVICIOS ACADÉMICOS \nCOORDINACIÓN DE ADMINISTRACIÓN ESCOLAR \nÁREA DE SERVICIOS ESCOLARES "
     let documentName: String
     let image: UIImage = UIImage(imageLiteralResourceName: "LOGO-UNAM.png")
-    let studentInformation: String
-    let tableTitle: String
+    let tableTitle: String = "  CLAVE       NOMBRE DE LA ASIGNATURA                                                   GRUPO"
+    let studentConstancia: Student
+    
 
-    init( documentName: String, studentInformation: String,tableTitle: String ) {
-      
+    init( documentName: String, studentConstancia: Student) {
         self.documentName = documentName
-        
-        self.studentInformation = studentInformation
-        self.tableTitle = tableTitle
+        self.studentConstancia = studentConstancia
     }
     
     func createConstancy(array: [SchoolSubject]) -> Data {
-      // 1
-        
-      let pdfMetaData = [
-        kCGPDFContextCreator: "Coordinación de administración escolar",
-        kCGPDFContextAuthor: "cae",
-        kCGPDFContextTitle: title
-      ]
-      let format = UIGraphicsPDFRendererFormat()
-      format.documentInfo = pdfMetaData as [String: Any]
+        let pdfMetaData = [
+            kCGPDFContextCreator: "Coordinación de administración escolar",
+            kCGPDFContextAuthor: "cae",
+            kCGPDFContextTitle: title
+        ]
+        let format = UIGraphicsPDFRendererFormat()
+        format.documentInfo = pdfMetaData as [String: Any]
         var i: Int = 0
         var rowselected: String?
-    
-      let pageWidth = 8.5 * 72.0
-      let pageHeight = 11 * 72.0
-      let pageRect = CGRect(x: 0, y: 0, width: pageWidth, height: pageHeight)
-      let renderer = UIGraphicsPDFRenderer(bounds: pageRect, format: format)
-      let data = renderer.pdfData { (context) in
+        
+        let pageWidth = 8.5 * 72.0
+        let pageHeight = 11 * 72.0
+        let pageRect = CGRect(x: 0, y: 0, width: pageWidth, height: pageHeight)
+        let renderer = UIGraphicsPDFRenderer(bounds: pageRect, format: format)
+        let data = renderer.pdfData { (context) in
 
         context.beginPage()
 
@@ -50,7 +46,7 @@ class PDFCreator: NSObject {
         addImage(pageRect: pageRect)
         addSello(pageRect: pageRect)
         addBodyText(pageRect: pageRect, textTop: titleBottom + 15)
-        addDataFromTheStudentText(pageRect: pageRect, textTop: CGFloat(160))
+        addDataFromTheStudentText(pageRect: pageRect, textTop: CGFloat(160), student: studentConstancia)
         let context = context.cgContext
         
         drawTable(context, pageRect: pageRect, tearOffY: CGFloat(265),
@@ -66,6 +62,35 @@ class PDFCreator: NSObject {
         addFooter(pageRect: pageRect)
       }
 
+      return data
+    }
+    func createConstancySemester() -> Data {
+      let pdfMetaData = [
+        kCGPDFContextCreator: "Coordinación de administración escolar",
+        kCGPDFContextAuthor: "cae",
+        kCGPDFContextTitle: title
+      ]
+      let format = UIGraphicsPDFRendererFormat()
+      format.documentInfo = pdfMetaData as [String: Any]
+    
+      let pageWidth = 8.5 * 72.0
+      let pageHeight = 11 * 72.0
+      let pageRect = CGRect(x: 0, y: 0, width: pageWidth, height: pageHeight)
+      let renderer = UIGraphicsPDFRenderer(bounds: pageRect, format: format)
+      let data = renderer.pdfData { (context) in
+
+        context.beginPage()
+
+        let titleBottom = addTitle(pageRect: pageRect)
+        
+        addImage(pageRect: pageRect)
+        addSello(pageRect: pageRect)
+        addBodyText(pageRect: pageRect, textTop: titleBottom + 15)
+        addDataToSecondConstancy(pageRect: pageRect, textTop: CGFloat(160), student: studentConstancia)
+        addDataFromAtte(pageRect: pageRect, textTop: CGFloat(160))
+        
+        addFooter(pageRect: pageRect)
+      }
       return data
     }
     
@@ -137,11 +162,9 @@ class PDFCreator: NSObject {
     func drawTable(_ drawContext: CGContext, pageRect: CGRect,
                       tearOffY: CGFloat, numberTabs: Int) {
         let textFont = UIFont.systemFont(ofSize: 14.0, weight: .bold)
-        // 1
         let paragraphStyle = NSMutableParagraphStyle()
         paragraphStyle.alignment = .natural
         paragraphStyle.lineBreakMode = .byWordWrapping
-        // 2
         let textAttributes = [
           NSAttributedString.Key.paragraphStyle: paragraphStyle,
           NSAttributedString.Key.font: textFont
@@ -150,7 +173,7 @@ class PDFCreator: NSObject {
           string: tableTitle,
           attributes: textAttributes
         )
-        // 3
+
         let textRect = CGRect(
           x: 30,
           y: 270,
@@ -209,7 +232,9 @@ class PDFCreator: NSObject {
         drawContext.restoreGState()
     }
     
-    func addDataFromTheStudentText(pageRect: CGRect, textTop: CGFloat) {
+    func addDataFromTheStudentText(pageRect: CGRect, textTop: CGFloat, student: Student) {
+        
+        let studentInformation = "El alumno: \(student.name)\nCon número de cuenta: \(student.accountNumber)\nRegistrado en la carrera: \(student.career)\nSe encuentra actualmente inscrito en el semestre: \(student.currentSemester)\nInicio del próximo semetre: \(student.beginningSemester)\nCursa actualmente las siguientes materias:";
       let textFont = UIFont.systemFont(ofSize: 14.0, weight: .regular)
       // 1
       let paragraphStyle = NSMutableParagraphStyle()
@@ -233,6 +258,59 @@ class PDFCreator: NSObject {
       )
       attributedText.draw(in: textRect)
     }
+    func addDataToSecondConstancy(pageRect: CGRect, textTop: CGFloat, student: Student) {
+        
+        let studentInformation = "A QUIEN CORRESPONDA \n\n Por medio de la presente se hace constar que el alumno \(student.name) con el número de cuenta:\(student.accountNumber) se encuentra inscrito en la carrera de \(student.career) en la Universidad Latinoamerica Unida, en el semestre \(student.currentSemester) cuyo inicio se registra el \(student.beginningSemester). \nEsta constancia credita que cuenta con al menos una materia inscrita de manera ordinaria por lo cual cuenta con todos los beneficios y servicios que la Facultad otorga a sus estudiasnte \n\nSe extiende la presente a petición del interesado."
+      let textFont = UIFont.systemFont(ofSize: 15.0, weight: .regular)
+      // 1
+      let paragraphStyle = NSMutableParagraphStyle()
+      paragraphStyle.alignment = .natural
+      paragraphStyle.lineBreakMode = .byWordWrapping
+      // 2
+      let textAttributes = [
+        NSAttributedString.Key.paragraphStyle: paragraphStyle,
+        NSAttributedString.Key.font: textFont
+      ]
+      let attributedText = NSAttributedString(
+        string: studentInformation,
+        attributes: textAttributes
+      )
+      // 3
+      let textRect = CGRect(
+        x: 30,
+        y: textTop + 60,
+        width: pageRect.width - 120,
+        height: pageRect.height - textTop - pageRect.height / 5.0
+      )
+      attributedText.draw(in: textRect)
+    }
+    func addDataFromAtte(pageRect: CGRect, textTop: CGFloat) {
+        
+        let studentInformation = "ATENTAMENTE\nPOR MI RAZA HABLARÁ EL ESPÍRITU\nIng. Fernanda Hernández\nJEFA DEL ÁREA DE SERVICIOS ESCOLARES";
+      let textFont = UIFont.systemFont(ofSize: 14.0, weight: .regular)
+      // 1
+      let paragraphStyle = NSMutableParagraphStyle()
+      paragraphStyle.alignment = .natural
+      paragraphStyle.lineBreakMode = .byWordWrapping
+      // 2
+      let textAttributes = [
+        NSAttributedString.Key.paragraphStyle: paragraphStyle,
+        NSAttributedString.Key.font: textFont
+      ]
+      let attributedText = NSAttributedString(
+        string: studentInformation,
+        attributes: textAttributes
+      )
+      // 3
+      let textRect = CGRect(
+        x: 30,
+        y: 530,
+        width: pageRect.width - 20,
+        height: pageRect.height - textTop - pageRect.height / 5.0
+      )
+      attributedText.draw(in: textRect)
+    }
+    
     
     func addOneRowWithoutGroup(pageRect: CGRect, textTop: CGFloat, row: String, place: Int) {
       let textFont = UIFont.systemFont(ofSize: 14.0, weight: .regular)
@@ -308,38 +386,7 @@ class PDFCreator: NSObject {
       attributedText.draw(in: textRect)
     }
     
-    func createConstancySemester() -> Data {
-      // 1
-        
-      let pdfMetaData = [
-        kCGPDFContextCreator: "Coordinación de administración escolar",
-        kCGPDFContextAuthor: "cae",
-        kCGPDFContextTitle: title
-      ]
-      let format = UIGraphicsPDFRendererFormat()
-      format.documentInfo = pdfMetaData as [String: Any]
     
-      let pageWidth = 8.5 * 72.0
-      let pageHeight = 11 * 72.0
-      let pageRect = CGRect(x: 0, y: 0, width: pageWidth, height: pageHeight)
-      let renderer = UIGraphicsPDFRenderer(bounds: pageRect, format: format)
-      let data = renderer.pdfData { (context) in
-
-        context.beginPage()
-
-        let titleBottom = addTitle(pageRect: pageRect)
-        
-        addImage(pageRect: pageRect)
-        addSello(pageRect: pageRect)
-        addBodyText(pageRect: pageRect, textTop: titleBottom + 15)
-        addDataFromTheStudentText(pageRect: pageRect, textTop: CGFloat(160))
-        
-       
-        addFooter(pageRect: pageRect)
-      }
-
-      return data
-    }
     
     
 }

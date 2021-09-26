@@ -33,12 +33,8 @@ struct RestClient<T: Restable> {
         }
     }
 
-    func show(complete: @escaping (Result<T?, Error>) -> Void) {
-        show("", complete: complete)
-    }
-
-    func show(_ identifier: String, complete: @escaping (Result<T?, Error>) -> Void) {
-        client.get(path: "\(path)/\(identifier)") { result in
+    func show( complete: @escaping (Result<T?, Error>) -> Void) {
+        client.get(path: path) { result in
             let newResult = result.flatMap { parse(data: $0) }
             complete(newResult)
         }
@@ -50,6 +46,7 @@ struct RestClient<T: Restable> {
         client.post(path: path, body: data) { result in
             let newResult = result.flatMap { parse(data: $0) }
             complete(newResult)
+            print("RRResult: \(newResult)")
         }
     }
 

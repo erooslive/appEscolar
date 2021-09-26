@@ -7,12 +7,11 @@
 
 import UIKit
 
-class NoticeViewController: UIViewController,UICollectionViewDataSource,UICollectionViewDelegate, UNUserNotificationCenterDelegate,UICollectionViewDelegateFlowLayout{
+class NoticeViewController: UIViewController,UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout{
 
     let viewAnnouncementService = ViewAnnouncementService()
-   
     
-   var announcements: [Announcement]?{
+    var announcements: [Announcement]?{
         didSet {
             self.collectioView.reloadData()
         }
@@ -22,37 +21,24 @@ class NoticeViewController: UIViewController,UICollectionViewDataSource,UICollec
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        loasdConfiguration()
+        loadAnnouncements()
+
+    }
+    func loasdConfiguration(){
         collectioView.delegate = self
         collectioView.dataSource = self
         collectioView.prefetchDataSource = self
         let nib = UINib(nibName: String(describing: AnnouncementCollectionViewCell.self), bundle: nil)
         collectioView.register(nib, forCellWithReuseIdentifier: "feedAnnouncements")
-        loadAnnouncements()
-        print("NoticeViewController")
-
-        // Do any additional setup after loading the view.
     }
     
     func loadAnnouncements() {
         viewAnnouncementService.load { [unowned self] announcements in self.announcements = announcements }
+    }
+    
         
-    }
-    
-    func cluodMessaging(){
-        if #available(iOS 10.0, *) {
-          // For iOS 10 display notification (sent via APNS)
-          UNUserNotificationCenter.current().delegate = self
-
-          let authOptions: UNAuthorizationOptions = [.alert, .badge, .sound]
-          UNUserNotificationCenter.current().requestAuthorization(
-            options: authOptions,
-            completionHandler: { _, _ in }
-          )
-        }
-    }
-    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        //print("dani mi amor:\(schoolsubjects?.count)")
         return announcements?.count ?? 1
     }
     
@@ -74,7 +60,4 @@ extension NoticeViewController: UICollectionViewDataSourcePrefetching {
     }
 }
 
-extension AppDelegate: UNUserNotificationCenterDelegate{
-    
-}
 

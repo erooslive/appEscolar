@@ -16,11 +16,13 @@
 		3B1414CF26AB5A6400015A1D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B1414CD26AB5A6400015A1D /* LaunchScreen.storyboard */; };
 		3B1C35E526CCD07D006EE0F1 /* DownloadDocumentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1C35E426CCD07D006EE0F1 /* DownloadDocumentViewController.swift */; };
 		3B1C35E826CCD849006EE0F1 /* PpreviewPDFViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1C35E726CCD849006EE0F1 /* PpreviewPDFViewController.swift */; };
-		3B1C35EB26CCDE5D006EE0F1 /* 312272795.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 3B1C35EA26CCDE5D006EE0F1 /* 312272795.pdf */; };
 		3B1C35EE26D3169B006EE0F1 /* PDFCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1C35ED26D3169B006EE0F1 /* PDFCreator.swift */; };
 		3B1C35F126D3268D006EE0F1 /* LOGO-UNAM.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B1C35F026D3268D006EE0F1 /* LOGO-UNAM.png */; };
 		3B1C35F426D782DE006EE0F1 /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1C35F326D782DD006EE0F1 /* Student.swift */; };
 		3B1C35F726D8A71E006EE0F1 /* SchoolSubject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1C35F626D8A71E006EE0F1 /* SchoolSubject.swift */; };
+		3B3AA08526FEF464007385A7 /* ViewStudentService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3AA08426FEF464007385A7 /* ViewStudentService.swift */; };
+		3B3AA08826FF0479007385A7 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3AA08726FF0479007385A7 /* BaseViewController.swift */; };
+		3B3AA09126FF8889007385A7 /* pngegg.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B3AA09026FF8889007385A7 /* pngegg.png */; };
 		3B41B37526AE3CC700915CF1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3B41B37426AE3CC700915CF1 /* GoogleService-Info.plist */; };
 		3B41B38826B9FB0B00915CF1 /* AmacaConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B41B38726B9FB0B00915CF1 /* AmacaConfig.swift */; };
 		3B41B38B26B9FB5300915CF1 /* HttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B41B38A26B9FB5300915CF1 /* HttpClient.swift */; };
@@ -32,22 +34,10 @@
 		3B41B39D26B9FEB800915CF1 /* RestClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B41B39C26B9FEB800915CF1 /* RestClient.swift */; };
 		3B41B3A126B9FFB500915CF1 /* ViewSchooSubjectsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B41B3A026B9FFB500915CF1 /* ViewSchooSubjectsService.swift */; };
 		3B41B3A526BA00E100915CF1 /* Amaca.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3B41B3A426BA00E100915CF1 /* Amaca.plist */; };
-		3B41B3A926BA014B00915CF1 /* Usuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B41B3A826BA014B00915CF1 /* Usuario.swift */; };
 		3B41B3AC26BA12C600915CF1 /* NoticeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B41B3AB26BA12C600915CF1 /* NoticeViewController.swift */; };
-		3B41B3B026BA1A5C00915CF1 /* DataContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B41B3AF26BA1A5C00915CF1 /* DataContainer.swift */; };
-		3B41B3B326BA1AA700915CF1 /* StorageType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B41B3B226BA1AA700915CF1 /* StorageType.swift */; };
-		3B41B3B626BA1B4700915CF1 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B41B3B526BA1B4700915CF1 /* Post.swift */; };
-		3B41B3BA26BA1B9500915CF1 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B41B3B926BA1B9500915CF1 /* User.swift */; };
-		3B41B3BD26BA1B9B00915CF1 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B41B3BC26BA1B9B00915CF1 /* Image.swift */; };
 		3B41C35026E0AFE1004B924D /* InformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B41C34F26E0AFE1004B924D /* InformationViewController.swift */; };
 		3B41C35326E0B216004B924D /* ShowPDFViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B41C35226E0B216004B924D /* ShowPDFViewController.swift */; };
-		3B41C35B26E8206B004B924D /* FeedService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B41C35A26E8206B004B924D /* FeedService.swift */; };
 		3B41C36126E829B4004B924D /* PostCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B41C35F26E829B4004B924D /* PostCollectionViewCell.swift */; };
-		3B41C36226E829B4004B924D /* PostCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B41C36026E829B4004B924D /* PostCollectionViewCell.xib */; };
-		3B41C37126E87FE2004B924D /* Faker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B41C37026E87FE2004B924D /* Faker.swift */; };
-		3B41C37426E87FF9004B924D /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B41C37326E87FF9004B924D /* Credentials.swift */; };
-		3B41C37726E88019004B924D /* CurrentUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B41C37626E88019004B924D /* CurrentUser.swift */; };
-		3B41C37A26E8814C004B924D /* ImageStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B41C37926E8814C004B924D /* ImageStore.swift */; };
 		3B41C38126EB493B004B924D /* ManualSchoolConstancy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B41C38026EB493B004B924D /* ManualSchoolConstancy.swift */; };
 		3B41C38726F15E85004B924D /* ConstancyRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B41C38626F15E85004B924D /* ConstancyRequestViewController.swift */; };
 		3B41C38A26F1B072004B924D /* SelectConstancyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B41C38926F1B072004B924D /* SelectConstancyViewController.swift */; };
@@ -62,6 +52,9 @@
 		3B490C0126FAC17C001E0B9E /* AnnouncementCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B490BFF26FAC17C001E0B9E /* AnnouncementCollectionViewCell.swift */; };
 		3B490C0226FAC17C001E0B9E /* AnnouncementCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B490C0026FAC17C001E0B9E /* AnnouncementCollectionViewCell.xib */; };
 		3B490C0526FB1CCC001E0B9E /* ShowAnnouncemetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B490C0426FB1CCB001E0B9E /* ShowAnnouncemetViewController.swift */; };
+		3B58276626FD0A3D00E8877E /* RequirementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B58276526FD0A3D00E8877E /* RequirementViewController.swift */; };
+		3B58276A26FDB88D00E8877E /* TramitesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B58276926FDB88D00E8877E /* TramitesViewController.swift */; };
+		3B58276D26FDD8F700E8877E /* TypeOfDocumentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B58276C26FDD8F700E8877E /* TypeOfDocumentsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -75,11 +68,13 @@
 		3B1414D026AB5A6400015A1D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3B1C35E426CCD07D006EE0F1 /* DownloadDocumentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadDocumentViewController.swift; sourceTree = "<group>"; };
 		3B1C35E726CCD849006EE0F1 /* PpreviewPDFViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PpreviewPDFViewController.swift; sourceTree = "<group>"; };
-		3B1C35EA26CCDE5D006EE0F1 /* 312272795.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 312272795.pdf; sourceTree = "<group>"; };
 		3B1C35ED26D3169B006EE0F1 /* PDFCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFCreator.swift; sourceTree = "<group>"; };
 		3B1C35F026D3268D006EE0F1 /* LOGO-UNAM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LOGO-UNAM.png"; sourceTree = "<group>"; };
 		3B1C35F326D782DD006EE0F1 /* Student.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
 		3B1C35F626D8A71E006EE0F1 /* SchoolSubject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolSubject.swift; sourceTree = "<group>"; };
+		3B3AA08426FEF464007385A7 /* ViewStudentService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewStudentService.swift; sourceTree = "<group>"; };
+		3B3AA08726FF0479007385A7 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		3B3AA09026FF8889007385A7 /* pngegg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pngegg.png; sourceTree = "<group>"; };
 		3B41B37426AE3CC700915CF1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/416063082-LEAL CASTILLO JOSE ENRIQUE/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3B41B38726B9FB0B00915CF1 /* AmacaConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmacaConfig.swift; sourceTree = "<group>"; };
 		3B41B38A26B9FB5300915CF1 /* HttpClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpClient.swift; sourceTree = "<group>"; };
@@ -91,22 +86,10 @@
 		3B41B39C26B9FEB800915CF1 /* RestClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestClient.swift; sourceTree = "<group>"; };
 		3B41B3A026B9FFB500915CF1 /* ViewSchooSubjectsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewSchooSubjectsService.swift; sourceTree = "<group>"; };
 		3B41B3A426BA00E100915CF1 /* Amaca.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Amaca.plist; sourceTree = "<group>"; };
-		3B41B3A826BA014B00915CF1 /* Usuario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Usuario.swift; sourceTree = "<group>"; };
 		3B41B3AB26BA12C600915CF1 /* NoticeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeViewController.swift; sourceTree = "<group>"; };
-		3B41B3AF26BA1A5C00915CF1 /* DataContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataContainer.swift; sourceTree = "<group>"; };
-		3B41B3B226BA1AA700915CF1 /* StorageType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageType.swift; sourceTree = "<group>"; };
-		3B41B3B526BA1B4700915CF1 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
-		3B41B3B926BA1B9500915CF1 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		3B41B3BC26BA1B9B00915CF1 /* Image.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		3B41C34F26E0AFE1004B924D /* InformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationViewController.swift; sourceTree = "<group>"; };
 		3B41C35226E0B216004B924D /* ShowPDFViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowPDFViewController.swift; sourceTree = "<group>"; };
-		3B41C35A26E8206B004B924D /* FeedService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedService.swift; sourceTree = "<group>"; };
 		3B41C35F26E829B4004B924D /* PostCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCollectionViewCell.swift; sourceTree = "<group>"; };
-		3B41C36026E829B4004B924D /* PostCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostCollectionViewCell.xib; sourceTree = "<group>"; };
-		3B41C37026E87FE2004B924D /* Faker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Faker.swift; sourceTree = "<group>"; };
-		3B41C37326E87FF9004B924D /* Credentials.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
-		3B41C37626E88019004B924D /* CurrentUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentUser.swift; sourceTree = "<group>"; };
-		3B41C37926E8814C004B924D /* ImageStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageStore.swift; sourceTree = "<group>"; };
 		3B41C38026EB493B004B924D /* ManualSchoolConstancy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManualSchoolConstancy.swift; sourceTree = "<group>"; };
 		3B41C38626F15E85004B924D /* ConstancyRequestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstancyRequestViewController.swift; sourceTree = "<group>"; };
 		3B41C38926F1B072004B924D /* SelectConstancyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectConstancyViewController.swift; sourceTree = "<group>"; };
@@ -122,6 +105,9 @@
 		3B490BFF26FAC17C001E0B9E /* AnnouncementCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnouncementCollectionViewCell.swift; sourceTree = "<group>"; };
 		3B490C0026FAC17C001E0B9E /* AnnouncementCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AnnouncementCollectionViewCell.xib; sourceTree = "<group>"; };
 		3B490C0426FB1CCB001E0B9E /* ShowAnnouncemetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowAnnouncemetViewController.swift; sourceTree = "<group>"; };
+		3B58276526FD0A3D00E8877E /* RequirementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequirementViewController.swift; sourceTree = "<group>"; };
+		3B58276926FDB88D00E8877E /* TramitesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TramitesViewController.swift; sourceTree = "<group>"; };
+		3B58276C26FDD8F700E8877E /* TypeOfDocumentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeOfDocumentsViewController.swift; sourceTree = "<group>"; };
 		5A39F462896A8EEC9E93C2FF /* Pods_AppEscolarFI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppEscolarFI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6712076FB0F6F9BD23A3FC0 /* Pods-AppEscolarFI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppEscolarFI.debug.xcconfig"; path = "Target Support Files/Pods-AppEscolarFI/Pods-AppEscolarFI.debug.xcconfig"; sourceTree = "<group>"; };
 		CE42FB5E5D9B7F760AF91012 /* Pods-AppEscolarFI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppEscolarFI.release.xcconfig"; path = "Target Support Files/Pods-AppEscolarFI/Pods-AppEscolarFI.release.xcconfig"; sourceTree = "<group>"; };
@@ -169,9 +155,7 @@
 		3B1414C126AB5A6200015A1D /* AppEscolarFI */ = {
 			isa = PBXGroup;
 			children = (
-				3B490BD826F7ADCE001E0B9E /* AppEscolarFI.entitlements */,
 				3B41C35826E74F93004B924D /* assets */,
-				3B41B3AE26BA1A2500915CF1 /* Storage */,
 				3B41B3A726BA012200915CF1 /* Models */,
 				3B41B39F26B9FEEC00915CF1 /* Services */,
 				3B41B38526AE404400915CF1 /* viewcontroller */,
@@ -179,15 +163,14 @@
 				3B41B36626AB5D1200915CF1 /* Network */,
 				3B1414C226AB5A6200015A1D /* AppDelegate.swift */,
 				3B1414C426AB5A6200015A1D /* SceneDelegate.swift */,
-				3B41C37926E8814C004B924D /* ImageStore.swift */,
 				3B41B37426AE3CC700915CF1 /* GoogleService-Info.plist */,
+				3B490BD826F7ADCE001E0B9E /* AppEscolarFI.entitlements */,
 				3B1414C626AB5A6200015A1D /* ViewController.swift */,
 				3B41B3A426BA00E100915CF1 /* Amaca.plist */,
 				3B1414C826AB5A6200015A1D /* Main.storyboard */,
 				3B1414CB26AB5A6400015A1D /* Assets.xcassets */,
 				3B1414CD26AB5A6400015A1D /* LaunchScreen.storyboard */,
 				3B1414D026AB5A6400015A1D /* Info.plist */,
-				3B1C35ED26D3169B006EE0F1 /* PDFCreator.swift */,
 			);
 			path = AppEscolarFI;
 			sourceTree = "<group>";
@@ -210,8 +193,8 @@
 		3B41B38426AE403600915CF1 /* views */ = {
 			isa = PBXGroup;
 			children = (
-				3B41C35F26E829B4004B924D /* PostCollectionViewCell.swift */,
-				3B41C36026E829B4004B924D /* PostCollectionViewCell.xib */,
+				3B490BE426F87316001E0B9E /* ManualSchoolConstancyCollectionViewCell.xib */,
+				3B490C0026FAC17C001E0B9E /* AnnouncementCollectionViewCell.xib */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -228,10 +211,13 @@
 				3B41C38926F1B072004B924D /* SelectConstancyViewController.swift */,
 				3B490BDD26F7FEEF001E0B9E /* SecondPreviewViewController.swift */,
 				3B490BE326F87316001E0B9E /* ManualSchoolConstancyCollectionViewCell.swift */,
-				3B490BE426F87316001E0B9E /* ManualSchoolConstancyCollectionViewCell.xib */,
 				3B490BFF26FAC17C001E0B9E /* AnnouncementCollectionViewCell.swift */,
-				3B490C0026FAC17C001E0B9E /* AnnouncementCollectionViewCell.xib */,
 				3B490C0426FB1CCB001E0B9E /* ShowAnnouncemetViewController.swift */,
+				3B58276526FD0A3D00E8877E /* RequirementViewController.swift */,
+				3B58276926FDB88D00E8877E /* TramitesViewController.swift */,
+				3B41C35F26E829B4004B924D /* PostCollectionViewCell.swift */,
+				3B58276C26FDD8F700E8877E /* TypeOfDocumentsViewController.swift */,
+				3B3AA08726FF0479007385A7 /* BaseViewController.swift */,
 			);
 			path = viewcontroller;
 			sourceTree = "<group>";
@@ -239,11 +225,12 @@
 		3B41B39F26B9FEEC00915CF1 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				3B41C35A26E8206B004B924D /* FeedService.swift */,
 				3B41B3A026B9FFB500915CF1 /* ViewSchooSubjectsService.swift */,
+				3B1C35ED26D3169B006EE0F1 /* PDFCreator.swift */,
 				3B41C39C26F1B3E7004B924D /* CreateManualRecordsService.swift */,
 				3B490BF626F879CC001E0B9E /* ViewManualSchoolConstancyService.swift */,
 				3B490BFC26FABA78001E0B9E /* ViewAnnouncementService.swift */,
+				3B3AA08426FEF464007385A7 /* ViewStudentService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -251,13 +238,6 @@
 		3B41B3A726BA012200915CF1 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				3B41B3B526BA1B4700915CF1 /* Post.swift */,
-				3B41B3B926BA1B9500915CF1 /* User.swift */,
-				3B41C37026E87FE2004B924D /* Faker.swift */,
-				3B41C37626E88019004B924D /* CurrentUser.swift */,
-				3B41C37326E87FF9004B924D /* Credentials.swift */,
-				3B41B3BC26BA1B9B00915CF1 /* Image.swift */,
-				3B41B3A826BA014B00915CF1 /* Usuario.swift */,
 				3B1C35F326D782DD006EE0F1 /* Student.swift */,
 				3B1C35F626D8A71E006EE0F1 /* SchoolSubject.swift */,
 				3B41C38026EB493B004B924D /* ManualSchoolConstancy.swift */,
@@ -266,21 +246,12 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		3B41B3AE26BA1A2500915CF1 /* Storage */ = {
-			isa = PBXGroup;
-			children = (
-				3B41B3AF26BA1A5C00915CF1 /* DataContainer.swift */,
-				3B41B3B226BA1AA700915CF1 /* StorageType.swift */,
-			);
-			path = Storage;
-			sourceTree = "<group>";
-		};
 		3B41C35826E74F93004B924D /* assets */ = {
 			isa = PBXGroup;
 			children = (
 				3B1C35F026D3268D006EE0F1 /* LOGO-UNAM.png */,
 				3B490BD526F71CB3001E0B9E /* Escudo.png */,
-				3B1C35EA26CCDE5D006EE0F1 /* 312272795.pdf */,
+				3B3AA09026FF8889007385A7 /* pngegg.png */,
 			);
 			path = assets;
 			sourceTree = "<group>";
@@ -352,13 +323,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3B41C36226E829B4004B924D /* PostCollectionViewCell.xib in Resources */,
 				3B490BE626F87316001E0B9E /* ManualSchoolConstancyCollectionViewCell.xib in Resources */,
 				3B1414CF26AB5A6400015A1D /* LaunchScreen.storyboard in Resources */,
 				3B490C0226FAC17C001E0B9E /* AnnouncementCollectionViewCell.xib in Resources */,
-				3B1C35EB26CCDE5D006EE0F1 /* 312272795.pdf in Resources */,
 				3B1C35F126D3268D006EE0F1 /* LOGO-UNAM.png in Resources */,
 				3B41B3A526BA00E100915CF1 /* Amaca.plist in Resources */,
+				3B3AA09126FF8889007385A7 /* pngegg.png in Resources */,
 				3B490BD626F71CB3001E0B9E /* Escudo.png in Resources */,
 				3B41B37526AE3CC700915CF1 /* GoogleService-Info.plist in Resources */,
 				3B1414CC26AB5A6400015A1D /* Assets.xcassets in Resources */,
@@ -419,43 +389,37 @@
 				3B1C35F726D8A71E006EE0F1 /* SchoolSubject.swift in Sources */,
 				3B1C35E826CCD849006EE0F1 /* PpreviewPDFViewController.swift in Sources */,
 				3B41C38726F15E85004B924D /* ConstancyRequestViewController.swift in Sources */,
-				3B41C37726E88019004B924D /* CurrentUser.swift in Sources */,
-				3B41B3A926BA014B00915CF1 /* Usuario.swift in Sources */,
+				3B3AA08526FEF464007385A7 /* ViewStudentService.swift in Sources */,
 				3B1C35E526CCD07D006EE0F1 /* DownloadDocumentViewController.swift in Sources */,
 				3B490BF726F879CC001E0B9E /* ViewManualSchoolConstancyService.swift in Sources */,
 				3B490BFA26FAB9FB001E0B9E /* Announcement.swift in Sources */,
 				3B41B39126B9FC2000915CF1 /* RequestError.swift in Sources */,
 				3B41B38B26B9FB5300915CF1 /* HttpClient.swift in Sources */,
-				3B41B3B326BA1AA700915CF1 /* StorageType.swift in Sources */,
-				3B41B3B626BA1B4700915CF1 /* Post.swift in Sources */,
 				3B490BDE26F7FEEF001E0B9E /* SecondPreviewViewController.swift in Sources */,
 				3B41C38A26F1B072004B924D /* SelectConstancyViewController.swift in Sources */,
 				3B41B39726B9FDAD00915CF1 /* StatusCode.swift in Sources */,
 				3B1414C726AB5A6200015A1D /* ViewController.swift in Sources */,
 				3B490C0126FAC17C001E0B9E /* AnnouncementCollectionViewCell.swift in Sources */,
+				3B3AA08826FF0479007385A7 /* BaseViewController.swift in Sources */,
 				3B1C35F426D782DE006EE0F1 /* Student.swift in Sources */,
-				3B41C37426E87FF9004B924D /* Credentials.swift in Sources */,
 				3B41C36126E829B4004B924D /* PostCollectionViewCell.swift in Sources */,
 				3B41B39D26B9FEB800915CF1 /* RestClient.swift in Sources */,
+				3B58276D26FDD8F700E8877E /* TypeOfDocumentsViewController.swift in Sources */,
 				3B41B3A126B9FFB500915CF1 /* ViewSchooSubjectsService.swift in Sources */,
 				3B41B38826B9FB0B00915CF1 /* AmacaConfig.swift in Sources */,
 				3B41B39A26B9FDDF00915CF1 /* RequestBuilder.swift in Sources */,
 				3B41B39426B9FD5400915CF1 /* HttpResponse.swift in Sources */,
-				3B41C35B26E8206B004B924D /* FeedService.swift in Sources */,
+				3B58276626FD0A3D00E8877E /* RequirementViewController.swift in Sources */,
 				3B41B3AC26BA12C600915CF1 /* NoticeViewController.swift in Sources */,
-				3B41B3BD26BA1B9B00915CF1 /* Image.swift in Sources */,
-				3B41B3B026BA1A5C00915CF1 /* DataContainer.swift in Sources */,
 				3B490BE526F87316001E0B9E /* ManualSchoolConstancyCollectionViewCell.swift in Sources */,
 				3B41C35026E0AFE1004B924D /* InformationViewController.swift in Sources */,
-				3B41B3BA26BA1B9500915CF1 /* User.swift in Sources */,
 				3B41B38E26B9FBCF00915CF1 /* ResponseError.swift in Sources */,
-				3B41C37A26E8814C004B924D /* ImageStore.swift in Sources */,
-				3B41C37126E87FE2004B924D /* Faker.swift in Sources */,
 				3B1C35EE26D3169B006EE0F1 /* PDFCreator.swift in Sources */,
 				3B41C39D26F1B3E7004B924D /* CreateManualRecordsService.swift in Sources */,
 				3B490BFD26FABA78001E0B9E /* ViewAnnouncementService.swift in Sources */,
 				3B41C38126EB493B004B924D /* ManualSchoolConstancy.swift in Sources */,
 				3B490C0526FB1CCC001E0B9E /* ShowAnnouncemetViewController.swift in Sources */,
+				3B58276A26FDB88D00E8877E /* TramitesViewController.swift in Sources */,
 				3B1414C326AB5A6200015A1D /* AppDelegate.swift in Sources */,
 				3B1414C526AB5A6200015A1D /* SceneDelegate.swift in Sources */,
 			);
@@ -607,7 +571,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = AppEscolarFI/AppEscolarFI.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = NDQFNTARQV;
 				INFOPLIST_FILE = AppEscolarFI/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -628,7 +592,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = AppEscolarFI/AppEscolarFI.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = NDQFNTARQV;
 				INFOPLIST_FILE = AppEscolarFI/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

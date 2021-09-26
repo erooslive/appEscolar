@@ -12,28 +12,21 @@ class DownloadDocumentViewController: UIViewController {
 
     let pdfView = PDFView()
     let viewSchooSubjectsService = ViewSchooSubjectsService()
+    let viewStudentService = ViewStudentService()
+    
     var schoolsubjects: [SchoolSubject]?
+    var student: Student?
     var delegate: CreateScoolSubjects?
 
     @IBOutlet weak var labelInfo: UILabel!
-    
-  
     @IBOutlet weak var certificado: UIButton!
     
     
-    
     override func viewDidLoad() {
-        
         super.viewDidLoad()
-        print("este es el de descargar")
+        loadConfiguration()
         loadSchoolSubjects()
-        print("ola \(String(describing: schoolsubjects?.count))")
-        //print("lola\(String(describing: delegate?.didCreateScoolSubjects))")
-        self.labelInfo.layer.cornerRadius = 10
-        certificado.layer.borderWidth = 1
-        certificado.layer.cornerRadius = 4
-        certificado.layer.borderColor = CGColor(red: 0, green: 0, blue: 300.0/255.0, alpha: 1.0)
-        
+        loadSchoolStudent()
 
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?){
@@ -43,11 +36,14 @@ class DownloadDocumentViewController: UIViewController {
         }
         else{
             if (segue.identifier == "pdfPreviewConstancy"){
-            //print("que pasa:\(String(describing: schoolsubjects!.count))")
-            let preview = segue.destination as? PpreviewPDFViewController
-            preview?.schoolsubjectsDone = self.schoolsubjects
-            
-        }
+                let preview = segue.destination as? PpreviewPDFViewController
+                preview?.schoolsubjectsDone = self.schoolsubjects
+                preview?.studentHere = self.student
+            }
+            else if (segue.identifier == "secondpdfview"){
+                let second = segue.destination as? SecondPreviewViewController
+                second?.studentHere = self.student
+            }
         }
     }
     override func viewDidLayoutSubviews() {
@@ -55,20 +51,30 @@ class DownloadDocumentViewController: UIViewController {
         pdfView.frame = view.bounds
         
     }
+    func loadConfiguration(){
+        self.labelInfo.layer.cornerRadius = 10
+        certificado.layer.borderWidth = 1
+        certificado.layer.cornerRadius = 4
+        certificado.layer.borderColor = CGColor(red: 0, green: 0, blue: 300.0/255.0, alpha: 1.0)
+        
+        
+    }
     func loadSchoolSubjects() {
         viewSchooSubjectsService.load { [unowned self] schoolsubjects in self.schoolsubjects = schoolsubjects
-            print("hola \(schoolsubjects.count)")
         }
-        //print("dani mi amor:\(schoolsubjects?.count)")
+    }
+    func loadSchoolStudent() {
+        viewStudentService.load { [unowned self] student in self.student = student
+           
+        }
     }
     func errorAlert() {
         
-        let alert = UIAlertController(title: "", message: "esta vacio", preferredStyle: .alert)
+        let alert = UIAlertController(title: "No cuentas con materias registradas", message: "En caso de requerir asesorìa, puedes acudir a ventanillias de servicios escolares", preferredStyle: .alert)
         let okAction = UIAlertAction(title: "Ok", style: .default)
         alert.addAction(okAction)
         self.present(alert, animated: true, completion: nil)
     }
-    
     
 }
 
